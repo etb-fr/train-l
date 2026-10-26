@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mon Train L</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Train L">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1E1624">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAC/klEQVR4nO3dMU5UURSAYTEuQN2AlY2U7oOWWFhQ2pqYWLkEEldgQWFsLYylm9DGzdhNiPoTneHe+4Dv65l5Ofnn3MfAwNHxk+f34G/ur74AtkscJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB+nB6gtIF+cfVl/CPC9fn62+hL842tqfYLhTTfxpU5VsJY473sSftlDJ+jhkcYW1iSy+IVXG1dbOZ2UcyvgXC6e05liRxR7mHzELNocy9jN/brPjUMYhJk9vahzKONzMGXr7nDQvDmvjukyb5KQ4lHG95sxzRhzKGGHCVN1zkIbHYW2MM3q2NgdJHKSxcThTRhs6YZuDJA7SwDicKXOMm7PNQRIHSRwkcZC2+4m3/Xz8/OnLt6//9SXHT5+9ffVm0PXcaDYHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIH6bb9d8g9fP/54+Xrs0EP/v7d+eOHjwY9+Gg2B0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEG6bT94e3Fy+uLkdPVV3BI2B0kcJHGQxEESB0kcpIFxjPvFTC4bN2ebgyQO0tg4nCyjDZ2wzUESB2l4HE6WcUbP1uYgzYjD8hhhwlQnbQ59XK8585x3rOjjukybpHsO0tQ4LI/DzZzh7M2hj0NMnt6CY0Uf+5k/t6PjJ88nP+XOxfmHVU99s6x6Oa28IbVC/sXCKS3+bkUfV1s7n5XHymWOmN9s4WWzlTh27nglW2hiZ3Nx7NypSjbVxM5242A5b5+TxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcpF/Z2HDL7mm4iwAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAC/klEQVR4nO3dMU5UURSAYTEuQN2AlY2U7oOWWFhQ2pqYWLkEEldgQWFsLYylm9DGzdhNiPoTneHe+4Dv65l5Ofnn3MfAwNHxk+f34G/ur74AtkscJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB+nB6gtIF+cfVl/CPC9fn62+hL842tqfYLhTTfxpU5VsJY473sSftlDJ+jhkcYW1iSy+IVXG1dbOZ2UcyvgXC6e05liRxR7mHzELNocy9jN/brPjUMYhJk9vahzKONzMGXr7nDQvDmvjukyb5KQ4lHG95sxzRhzKGGHCVN1zkIbHYW2MM3q2NgdJHKSxcThTRhs6YZuDJA7SwDicKXOMm7PNQRIHSRwkcZC2+4m3/Xz8/OnLt6//9SXHT5+9ffVm0PXcaDYHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIH6bb9d8g9fP/54+Xrs0EP/v7d+eOHjwY9+Gg2B0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEG6bT94e3Fy+uLkdPVV3BI2B0kcJHGQxEESB0kcpIFxjPvFTC4bN2ebgyQO0tg4nCyjDZ2wzUESB2l4HE6WcUbP1uYgzYjD8hhhwlQnbQ59XK8585x3rOjjukybpHsO0tQ4LI/DzZzh7M2hj0NMnt6CY0Uf+5k/t6PjJ88nP+XOxfmHVU99s6x6Oa28IbVC/sXCKS3+bkUfV1s7n5XHymWOmN9s4WWzlTh27nglW2hiZ3Nx7NypSjbVxM5242A5b5+TxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcpF/Z2HDL7mm4iwAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout : un tableau de départ façon quai, une seule colonne, grosse heure en tête */
+:root{
+  --bg:#F6F3F7; --panel:#FFFFFF; --ink:#1E1624; --muted:#6E6375; --line:#E4DCE8;
+  --l:#B98FC0; --l-ink:#2B1F33; --ok:#1F7A4D; --warn:#B25E00; --crit:#B3261E;
+  --warn-bg:#FFF2E0; --crit-bg:#FDECEA;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1E1624; --panel:#2A2031; --ink:#F3EEF5; --muted:#A99EAF; --line:#3A2F42;
+  --l:#CEADD2; --l-ink:#2B1F33; --ok:#6FD3A0; --warn:#F2A64B; --crit:#FF8A80;
+  --warn-bg:#3A2A14; --crit-bg:#3D1C1C; color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--body);
+  padding:max(18px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));}
+main{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;gap:12px}
+.badge{width:40px;height:40px;border-radius:9px;background:var(--l);color:var(--l-ink);display:grid;place-items:center;font:800 26px/1 var(--display);flex:none}
+.route{min-width:0;flex:1}
+.route .k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.route .v{font:700 18px/1.2 var(--display);font-stretch:80%;text-wrap:balance}
+button{font:inherit;color:inherit;cursor:pointer}
+.icon-btn{background:var(--panel);border:1px solid var(--line);border-radius:10px;width:42px;height:42px;display:grid;place-items:center;flex:none}
+.icon-btn:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--l);outline-offset:2px}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.hero .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.big{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.time{font:800 72px/1 var(--display);font-stretch:80%;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.in{font:700 22px/1 var(--display);font-stretch:85%;color:var(--l)}
+@media (prefers-color-scheme:light){.in{color:#7A4E82}}
+.meta{color:var(--muted);font-size:14px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:1px}
+.pill.ok{color:var(--ok);border:1px solid currentColor}
+.pill.late{color:var(--warn);border:1px solid currentColor}
+.pill.cx{color:var(--crit);border:1px solid currentColor}
+.list{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 16px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .t{font:700 22px/1 var(--display);font-stretch:82%;font-variant-numeric:tabular-nums}
+.row .d{min-width:0;font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .m{font:600 14px var(--display);font-variant-numeric:tabular-nums;color:var(--muted)}
+.alert{border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;border:1px solid}
+.alert.warn{background:var(--warn-bg);border-color:var(--warn);}
+.alert.crit{background:var(--crit-bg);border-color:var(--crit);}
+.alert.ok{background:var(--panel);border-color:var(--line);color:var(--ok);font-weight:600}
+.alert h3{margin:0;font:700 15px/1.3 var(--body)}
+.alert.warn h3{color:var(--warn)} .alert.crit h3{color:var(--crit)}
+.alert p{margin:0;font-size:14px;max-height:9.5em;overflow:auto}
+details.alert summary{cursor:pointer;list-style:none}
+details.alert summary::-webkit-details-marker{display:none}
+details.alert summary h3::after{content:" ›";font-weight:400}
+details.alert[open] summary h3::after{content:" ‹"}
+.later{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px}
+.later summary{cursor:pointer;color:var(--muted);font-weight:600}
+.later ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.later b{font-weight:600;font-variant-numeric:tabular-nums}
+.foot{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:12px;flex-wrap:wrap}
+.btn{background:var(--l);color:var(--l-ink);border:0;border-radius:10px;padding:11px 16px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.setup{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.setup h2{margin:0;font:700 22px var(--display);font-stretch:85%}
+.setup ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.setup a{color:inherit}
+label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+input{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
+.err{color:var(--crit);font-size:14px}
+.skel{opacity:.45}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+@media (prefers-reduced-motion:no-preference){.spin{animation:sp 1s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}}
+</style>
+</head>
+<body>
+<main id="app">
+  <header>
+    <div class="badge" aria-hidden="true">L</div>
+    <div class="route"><div class="k" id="k">Prochain train</div><div class="v" id="route">Clichy-Levallois → La Défense</div></div>
+    <button class="icon-btn" id="swap" aria-label="Inverser le sens" title="Inverser le sens">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4"/></svg>
+    </button>
+    <button class="icon-btn" id="refresh" aria-label="Actualiser" title="Actualiser">
+      <svg id="ri" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4M21 4v5h-5"/></svg>
+    </button>
+  </header>
+  <div id="body"></div>
+  <div class="foot"><span id="upd"></span><button class="btn ghost" id="settings" style="padding:4px 10px;font-size:12px">Réglages</button></div>
+</main>
+
+<script>
+"use strict";
+const API = "https://prim.iledefrance-mobilites.fr/marketplace/v2/navitia";
+const STATIONS = { home: "Clichy-Levallois", work: "La Défense" };
+const SWITCH_HOUR = 14;          // avant 14 h : vers La Défense ; après : retour
+const REFRESH_MS = 60000;
+
+const $ = s => document.querySelector(s);
+const store = {
+  get(k){ try { return JSON.parse(localStorage.getItem("trainL." + k)); } catch { return null; } },
+  set(k,v){ try { localStorage.setItem("trainL." + k, JSON.stringify(v)); } catch {} },
+  del(k){ try { localStorage.removeItem("trainL." + k); } catch {} }
+};
+let manualFlip = false, timer = null, lastData = null;
+
+function esc(s){ return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function stripHtml(s){ const d = document.createElement("div"); d.innerHTML = String(s || "").replace(/<br\s*\/?>/gi,"\n"); return (d.textContent || "").replace(/\n{3,}/g,"\n\n").trim(); }
+function parseNav(s){ // 20261026T083500
+  if(!s) return null;
+  const m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/.exec(s); if(!m) return null;
+  return new Date(+m[1], +m[2]-1, +m[3], +m[4], +m[5], +m[6]);
+}
+function hhmm(d){ return d.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}); }
+function navNow(){ const d = new Date(), p = n => String(n).padStart(2,"0");
+  return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}T${p(d.getHours())}${p(d.getMinutes())}00`; }
+
+function direction(){
+  const morning = new Date().getHours() < SWITCH_HOUR;
+  const toWork = manualFlip ? !morning : morning;
+  return toWork ? { from:"home", to:"work" } : { from:"work", to:"home" };
+}
+
+async function api(path){
+  const key = store.get("key");
+  const r = await fetch(API + path, { headers: { apikey: key } });
+  if (r.status === 401 || r.status === 403) { const e = new Error("Clé API refusée. Vérifie-la dans Réglages."); e.auth = true; throw e; }
+  if (!r.ok) throw new Error("Le service IDFM répond avec une erreur (" + r.status + "). Réessaie dans un instant.");
+  return r.json();
+}
+
+// Identifiants IDFM vérifiés le 26/10/2026 (gares Clichy - Levallois et La Défense, Transilien L).
+const IDS = { home: "stop_area:IDFM:72073", work: "stop_area:IDFM:71517", line: "line:IDFM:C01740" };
+async function resolveIds(){ return IDS; }
+
+// L'API mélange info trafic et pannes d'ascenseur (des centaines) : on ne garde que les messages
+// qui visent la ligne ou un train, jamais les ascenseurs.
+function msgOf(d, names){
+  for (const n of names) { const m = (d.messages || []).find(x => x.channel && (x.channel.name === n || (x.channel.types || []).includes(n))); if (m) return stripHtml(m.text); }
+  return "";
+}
+function nextPeriod(d){
+  const now = Date.now();
+  const ps = (d.application_periods || []).map(p => ({ b: parseNav(p.begin), e: parseNav(p.end) })).filter(p => p.b && p.e && p.e > now).sort((a,b) => a.b - b.b);
+  return ps[0] || null;
+}
+function disruptionsFrom(list){
+  const out = new Map();
+  for (const d of (list || [])) {
+    if (!d || d.status === "past") continue;
+    if ((d.tags || []).some(t => /ascenseur|escalator/i.test(t))) continue;
+    const types = (d.impacted_objects || []).map(o => (o.pt_object || {}).embedded_type);
+    if (!types.some(t => t === "line" || t === "trip" || t === "route" || t === "line_section")) continue;
+    // Les mises à jour temps réel d'un train (retard de quelques secondes…) n'ont pas de message : le retard est déjà affiché sur le train.
+    const title = msgOf(d, ["titre", "title", "notification"]);
+    const text = msgOf(d, ["moteur", "web", "email"]) || title;
+    if (!title && !text) continue;
+    const effect = (d.severity && d.severity.effect) || "";
+    const per = nextPeriod(d);
+    const key = title + "|" + (d.status || "");
+    const prev = out.get(key);
+    if (prev && prev.next && per && prev.next.b <= per.b) continue;   // garde l'occurrence la plus proche
+    out.set(key, {
+      id: d.id || d.disruption_id, ids: [d.id, d.disruption_id].filter(Boolean), active: d.status === "active",
+      crit: /NO_SERVICE|REDUCED_SERVICE/.test(effect) || /interrompu|supprim/i.test(text),
+      works: d.cause === "travaux", title, text, next: per
+    });
+  }
+  return [...out.values()];
+}
+function fmtPeriod(p){
+  if (!p) return "";
+  const d = p.b, today = new Date(); const tom = new Date(); tom.setDate(today.getDate() + 1);
+  const same = (a, b) => a.toDateString() === b.toDateString();
+  const day = same(d, today) ? "ce soir" : same(d, tom) ? "demain" : d.toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short" });
+  return day + " dès " + hhmm(d);
+}
+
+async function load(){
+  const ri = $("#ri"); ri.classList.add("spin");
+  const dir = direction();
+  try{
+    const ids = await resolveIds();
+    const from = ids[dir.from], to = ids[dir.to];
+    const q = `/journeys?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&datetime=${navNow()}`
+      + `&data_freshness=realtime&max_nb_transfers=0&direct_path=none&count=6&min_nb_journeys=5`
+      + `&allowed_id[]=${encodeURIComponent(ids.line)}`;
+    const [j, lr] = await Promise.all([
+      api(q),
+      api("/lines/" + encodeURIComponent(ids.line) + "/line_reports?count=20").catch(() => null)
+    ]);
+    const deps = [];
+    for (const jr of (j.journeys || [])) {
+      const s = (jr.sections || []).find(x => x.type === "public_transport");
+      if (!s) continue;
+      const dep = parseNav(s.departure_date_time), base = parseNav(s.base_departure_date_time) || dep;
+      const di = s.display_informations || {};
+      const links = (di.links || []).filter(l => l.type === "disruption").map(l => l.id);
+      deps.push({ dep, base, arr: parseNav(s.arrival_date_time), headsign: di.headsign || di.name || "", dest: di.direction || "",
+        delay: dep && base ? Math.round((dep - base) / 60000) : 0, status: jr.status || "", links });
+    }
+    const seen = new Set();
+    deps.sort((a,b) => a.dep - b.dep);
+    const uniq = deps.filter(d => { const k = +d.dep; if (seen.has(k)) return false; seen.add(k); return d.dep > Date.now() - 60000; });
+    const all = disruptionsFrom([...(j.disruptions || []), ...((lr && lr.disruptions) || [])]);
+    const byId = new Map(); all.forEach(d => { if (!byId.has(d.id)) byId.set(d.id, d); });
+    lastData = { dir, ids, deps: uniq, disr: [...byId.values()], at: new Date() };
+    render();
+  } catch(e){
+    if (e.auth) store.del("ids");
+    renderError(e.message || "Impossible de joindre le service. Vérifie ta connexion.");
+  } finally { ri.classList.remove("spin"); }
+}
+
+function header(){
+  const dir = direction();
+  $("#route").textContent = `${STATIONS[dir.from]} → ${STATIONS[dir.to]}`;
+  $("#k").textContent = manualFlip ? "Sens inversé manuellement" : (new Date().getHours() < SWITCH_HOUR ? "Ce matin · vers le bureau" : "Ce soir · retour");
+}
+
+function render(){
+  header();
+  const d = lastData; if (!d) return;
+  const now = Date.now();
+  const list = d.deps.filter(x => x.dep > now - 30000);
+  let h = "";
+  const active = d.disr.filter(x => x.active);
+  const soonLimit = now + 24 * 3600e3;
+  const soon = d.disr.filter(x => !x.active && x.next && x.next.b < soonLimit);
+  const later = d.disr.filter(x => !x.active && !(x.next && x.next.b < soonLimit)).sort((a,b) => (a.next ? a.next.b : 0) - (b.next ? b.next.b : 0));
+  for (const x of active) h += `<div class="alert ${x.crit ? "crit" : "warn"}" role="alert"><h3>${x.crit ? "Problème sur la ligne L" : "Ligne L perturbée"} · ${esc(x.title)}</h3><p>${esc(x.text)}</p></div>`;
+  if (!list.length) {
+    h += `<div class="hero"><div class="lbl">Aucun train trouvé</div><div class="meta">Pas de départ direct dans les prochaines heures. Le service est peut‑être interrompu : consulte les messages ci‑dessus ou réessaie.</div></div>`;
+  } else {
+    const n = list[0], mins = Math.max(0, Math.round((n.dep - now) / 60000));
+    const pill = n.delay > 0 ? `<span class="pill late">+${n.delay} min</span>` : `<span class="pill ok">à l'heure</span>`;
+    const lnk = n.links.map(id => d.disr.find(z => z.active && z.ids.includes(id))).filter(Boolean);
+    h += `<section class="hero" aria-live="polite">
+      <div class="lbl">Prochain départ ${pill}</div>
+      <div class="big"><span class="time">${hhmm(n.dep)}</span><span class="in">${mins <= 0 ? "à quai" : "dans " + mins + " min"}</span></div>
+      <div class="meta">${n.delay > 0 ? "Prévu à " + hhmm(n.base) + " · " : ""}${n.headsign ? "Train " + esc(n.headsign) + " · " : ""}direction ${esc(n.dest || "—")}${n.arr ? " · arrivée " + hhmm(n.arr) : ""}</div>
+      ${lnk.length ? `<div class="meta" style="color:var(--warn)">Ce train est concerné par une perturbation.</div>` : ""}
+    </section>`;
+    if (list.length > 1) {
+      h += `<div class="list">` + list.slice(1, 5).map(x => {
+        const m = Math.max(0, Math.round((x.dep - now) / 60000));
+        return `<div class="row"><span class="t">${hhmm(x.dep)}</span><span class="d">${esc(x.dest || "")}${x.delay > 0 ? ` <span class="pill late">+${x.delay}</span>` : ""}</span><span class="m">${m} min</span></div>`;
+      }).join("") + `</div>`;
+    }
+  }
+  if (!active.length) h += `<div class="alert ok">Aucune perturbation en cours sur la ligne L.</div>`;
+  for (const x of soon) h += `<details class="alert warn"><summary><h3>${x.works ? "Travaux" : "Prévu"} ${esc(fmtPeriod(x.next))} · ${esc(x.title)}</h3></summary><p>${esc(x.text)}</p></details>`;
+  if (later.length) h += `<details class="later"><summary>Travaux à venir sur la ligne L (${later.length})</summary><ul>` +
+    later.map(x => `<li><b>${esc(fmtPeriod(x.next))}</b> · ${esc(x.title)}</li>`).join("") + `</ul></details>`;
+  $("#body").innerHTML = h;
+  $("#upd").textContent = "Mis à jour à " + hhmm(d.at) + " · données IDFM temps réel";
+}
+
+function renderError(msg){
+  header();
+  $("#body").innerHTML = `<div class="alert crit"><h3>Horaires indisponibles</h3><p>${esc(msg)}</p></div>
+    <div class="actions"><button class="btn" id="retry">Réessayer</button></div>`;
+  $("#retry").onclick = load;
+}
+
+function renderSetup(err){
+  header();
+  const k = store.get("key") || "";
+  $("#body").innerHTML = `<form class="setup" id="f">
+    <h2>Une clé, une seule fois</h2>
+    <ol>
+      <li>Crée un compte gratuit sur <a href="https://prim.iledefrance-mobilites.fr" target="_blank" rel="noopener">prim.iledefrance-mobilites.fr</a>.</li>
+      <li>Dans « Mes jetons d'authentification », génère un jeton API.</li>
+      <li>Colle‑le ici. Il reste uniquement sur ce téléphone.</li>
+    </ol>
+    <label for="key">Jeton API PRIM<input id="key" autocomplete="off" autocapitalize="off" spellcheck="false" value="${esc(k)}" placeholder="ex. 9fK2…"></label>
+    ${err ? `<div class="err">${esc(err)}</div>` : ""}
+    <div class="actions"><button class="btn" type="submit">Enregistrer</button>${k ? `<button class="btn ghost" type="button" id="cancel">Annuler</button>` : ""}</div>
+  </form>`;
+  $("#f").onsubmit = e => { e.preventDefault(); const v = $("#key").value.trim(); if (!v) return; store.set("key", v); store.del("ids"); start(); };
+  const c = $("#cancel"); if (c) c.onclick = start;
+}
+
+function start(){
+  clearInterval(timer);
+  if (!store.get("key")) { renderSetup(); return; }
+  $("#body").innerHTML = `<div class="hero skel"><div class="lbl">Recherche du prochain train…</div><div class="time">--:--</div></div>`;
+  header(); load();
+  timer = setInterval(() => { if (document.visibilityState === "visible") load(); }, REFRESH_MS);
+}
+
+// Lien d'installation : https://…/#key=XXXX enregistre le jeton puis l'efface de l'adresse.
+(function(){ const m = /^#key=([A-Za-z0-9_-]{8,})$/.exec(location.hash || "");
+  if (m) { store.set("key", m[1]); try { history.replaceState(null, "", location.pathname); } catch {} } })();
+
+$("#swap").onclick =() => { manualFlip = !manualFlip; start(); };
+$("#refresh").onclick = () => store.get("key") ? load() : renderSetup();
+$("#settings").onclick = () => { clearInterval(timer); renderSetup(); };
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && store.get("key")) { manualFlip = false; load(); } });
+setInterval(() => { if (lastData) render(); }, 15000);
+start();
+</script>
+</body>
+</html>
